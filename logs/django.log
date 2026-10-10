@@ -1,0 +1,52 @@
+WARNING 2026-10-04 03:44:49,269 log Bad Request: /api/create_order/
+WARNING 2026-10-04 14:23:45,044 log Bad Request: /api/contact/
+WARNING 2026-10-04 14:25:27,495 log Bad Request: /api/create_order/
+WARNING 2026-10-04 15:13:43,402 log Unauthorized: /api/verify-me/
+WARNING 2026-10-04 15:13:43,409 log Unauthorized: /api/verify-me/
+WARNING 2026-10-04 15:13:55,370 log Unauthorized: /api/verify-superadmin/
+WARNING 2026-10-04 15:13:55,393 log Not Found: /api/token/refresh/
+WARNING 2026-10-04 15:13:56,756 log Unauthorized: /api/verify-me/
+WARNING 2026-10-04 15:13:56,858 log Unauthorized: /api/verify-me/
+WARNING 2026-10-04 15:13:56,861 log Unauthorized: /api/verify-me/
+ERROR 2026-10-04 15:16:10,057 log Internal Server Error: /api/delete_category/26/
+Traceback (most recent call last):
+  File "C:\Users\LapZone\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "C:\Users\LapZone\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\core\handlers\base.py", line 199, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\LapZone\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\views\decorators\csrf.py", line 64, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\LapZone\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LapZone\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\rest_framework\views.py", line 526, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\LapZone\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\rest_framework\views.py", line 474, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\LapZone\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\rest_framework\views.py", line 485, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\LapZone\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\rest_framework\views.py", line 523, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\LapZone\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\LapZone\Desktop\»—„Ã…\ÊÌ»\protofolio\market_back\market\categorys\views.py", line 45, in delete_category
+    category.delete()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\LapZone\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\db\models\base.py", line 1332, in delete
+    collector.collect([self], keep_parents=keep_parents)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LapZone\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\db\models\deletion.py", line 385, in collect
+    raise ProtectedError(
+    ...<7 lines>...
+    )
+django.db.models.deletion.ProtectedError: ("Cannot delete some instances of model 'Category' because they are referenced through protected foreign keys: 'Product.category'.", {<Product: gfhfg>})
+WARNING 2026-10-04 15:18:22,741 log Bad Request: /api/delete_user/6/
+WARNING 2026-10-04 15:18:25,368 log Forbidden: /api/delete_user/7/
+WARNING 2026-10-04 15:18:28,854 log Forbidden: /api/delete_user/7/
+WARNING 2026-10-04 15:18:43,786 log Forbidden: /api/delete_user/7/
+WARNING 2026-10-05 14:17:19,861 log Unauthorized: /api/contact_protofolio/
+ERROR 2026-10-05 14:22:45,653 log Internal Server Error: /api/contact_protofolio/
+ERROR 2026-10-05 14:22:48,339 log Internal Server Error: /api/contact_protofolio/
+WARNING 2026-10-05 14:36:25,119 log Bad Request: /api/contact_protofolio/
+WARNING 2026-10-05 14:36:39,768 log Bad Request: /api/contact_protofolio/
